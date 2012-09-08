@@ -361,29 +361,33 @@ textarea {
     clear: both; }
 
 /* line 22, ../sass/screen.scss */
+.featureImage {
+  max-width: 100%; }
+
+/* line 26, ../sass/screen.scss */
 .intro {
   background-color: #52f5ff; }
 
-/* line 26, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 .music {
   background-color: #dad6d3; }
 
-/* line 30, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .venues {
   background-color: #5d5a58; }
 
-/* line 34, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .mixes {
   background-color: #dad6d3; }
 
-/* line 38, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .signup {
   background-color: #5d5a58; }
 
-/* line 42, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .contact {
   background-color: #f4f0ee; }
 
-/* line 46, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .SCplayer {
   width: 100%; }

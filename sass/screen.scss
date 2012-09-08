@@ -19,6 +19,10 @@
  	@include susy-grid-background;
 }
 
+.featureImage{
+	max-width: 100%;
+}
+
 .intro{
 	background-color: $mainColor;
 }
