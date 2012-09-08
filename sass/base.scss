@@ -2,6 +2,9 @@
  VARIABLES 
 ---------------------*/
 
+/* misc */
+$browser-context: 16;
+
 /* colors */
 $baseColor: #2f2f2f; // dark grey
 $lightColor: #fff; // white
@@ -16,12 +19,18 @@ $bgColor3: #f4f0ee; // off white
 $headerFont: Patua One;
 $bodyFont: Actor;
 
-/* grid */
-$total-columns: 12; // 12 columns
-$column-width: 4em; // columns are 4em wide
-$gutter-width: 1em; // with 1em gutters
-$grid-padding: 1em; // and 1em padding on the grid container
+/* padding */
+$globalPadding: .8em;
 
+/* grid */
+$total-columns: 4; // a 4-column grid
+$column-width: 4em; // each column is 4em wide
+$gutter-width: 1em; // 1em gutters between columns
+$grid-padding: 0; // grid-padding equal to gutters
+
+$desktopBreak: 12;
+$mobileBreak: 4;
+ 
 
 /* --------------------
  FONT STYLING
@@ -56,8 +65,8 @@ a {
 }
 
 .genre{
-    font-size: 2.5em;
-    line-height: 1.5em;
+    font-size: 2.1em;
+    line-height: 1.2em;
     font-family: $headerFont, sans-serif;	
     color: $mainColorDark;
 }

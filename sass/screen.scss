@@ -9,44 +9,70 @@
 /* SCSS/CSS */
 @import 'base';
 @import 'main';
+@import 'mixins';
 
 
 /* --------------------
  PAGE LAYOUTS
 ---------------------*/
-.page{
-	@include container;
- 	@include susy-grid-background;
-}
-
 .featureImage{
 	max-width: 100%;
 }
 
 .intro{
 	background-color: $mainColor;
+	padding: $globalPadding;
+	@include opacity(.8);
+	position: relative;
 }
 
 .music{
 	background-color: $bgColor1;
+	padding: $globalPadding;
 }
 
 .venues{
 	background-color: $bgColor2;
+	padding: $globalPadding;
 }
 
 .mixes{
 	background-color: $bgColor1;
+	padding: $globalPadding;
 }
 
-.signup{
+.signUp{
 	background-color: $bgColor2;
+	padding: $globalPadding;
 }
 
 .contact{
 	background-color: $bgColor3;
+	padding: $globalPadding;
 }
 
 .SCplayer{
 	width: 100%;
 }
+
+#mc_embed_signup{
+	@include px-to-ems(width, 450);
+}
+
+/* show grid background
+@include susy-grid-background;
+*/
+ 	 
+.page{
+ 	@include container($total-columns);
+ 	
+ 	/* Tablet */
+    @include at-breakpoint(30em 8) {
+    	@include container;
+    	.intro{
+    		top: -200px;
+    		@include px-to-ems(left, 199);
+			@include px-to-ems(width, 400);
+    	}
+    }
+}	
