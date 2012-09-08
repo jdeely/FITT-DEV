@@ -383,3 +383,7 @@ textarea {
 /* line 42, ../sass/screen.scss */
 .contact {
   background-color: #f4f0ee; }
+
+/* line 46, ../sass/screen.scss */
+.SCplayer {
+  width: 100%; }
