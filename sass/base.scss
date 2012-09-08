@@ -1,0 +1,110 @@
+/* --------------------
+ VARIABLES 
+---------------------*/
+
+/* colors */
+$baseColor: #2f2f2f; // dark grey
+$lightColor: #fff; // white
+$mainColor: #52f5ff; // cyan
+$mainColorDark: #34969c; // darker cyan
+$accentColor: #fe1314; // red
+$bgColor1: #dad6d3; // light tan
+$bgColor2: #5d5a58; // brown/grey
+$bgColor3: #f4f0ee; // off white
+
+/* fonts */
+$headerFont: Patua One;
+$bodyFont: Actor;
+
+/* grid */
+$total-columns: 12; // 12 columns
+$column-width: 4em; // columns are 4em wide
+$gutter-width: 1em; // with 1em gutters
+$grid-padding: 1em; // and 1em padding on the grid container
+
+
+/* --------------------
+ FONT STYLING
+---------------------*/
+body {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    font-family: $bodyFont, sans-serif;
+    color: $baseColor;
+}
+
+a {
+	@include link-colors($accentColor, lighten($accentColor, 20%), darken($accentColor, 10%));
+	@include hover-link;
+	font-size: .8em;
+}
+
+.headerDark{	
+    color: $baseColor;	
+}
+
+.headerLight{
+    color: $lightColor;	
+}
+
+.bodyDark{
+    color: $baseColor;
+}
+
+.bodyLight{
+    color: $lightColor;
+}
+
+.genre{
+    font-size: 2.5em;
+    line-height: 1.5em;
+    font-family: $headerFont, sans-serif;	
+    color: $mainColorDark;
+}
+
+.venues LI{
+    font-size: 1.1em;
+    font-family: $headerFont, sans-serif;	
+    color: $lightColor;		
+}
+
+.formText{
+    font-family: $bodyFont, sans-serif;	
+    font-size: .75em;
+    color: $bgColor2;	
+    border-style: none; 
+	background-color: $bgColor1; 
+	padding: 5px;	
+}
+
+.btn{
+	width: 200px;
+	background-color: $mainColor;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+h1{
+    font-size: 2em;
+    line-height: 1.4em;
+    font-family: $headerFont, sans-serif;
+}
+
+.linkAccent{
+	@include link-colors($accentColor, lighten($accentColor, 20%), darken($accentColor, 10%));	
+}
+
+
+
+/* --------------------
+ OTHER ELEMENTS
+---------------------*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}

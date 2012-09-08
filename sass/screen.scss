@@ -1,0 +1,45 @@
+/* --------------------
+ IMPORTS
+---------------------*/
+/* extensions */
+@import "compass/reset";
+@import "susy";
+@import "compass";
+
+/* SCSS/CSS */
+@import 'base';
+@import 'main';
+
+
+/* --------------------
+ PAGE LAYOUTS
+---------------------*/
+.page{
+	@include container;
+ 	@include susy-grid-background;
+}
+
+.intro{
+	background-color: $mainColor;
+}
+
+.music{
+	background-color: $bgColor1;
+}
+
+.venues{
+	background-color: $bgColor2;
+}
+
+.mixes{
+	background-color: $bgColor1;
+}
+
+.signup{
+	background-color: $bgColor2;
+}
+
+.contact{
+	background-color: $bgColor3;
+}
+
