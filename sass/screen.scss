@@ -7,72 +7,155 @@
 @import "compass";
 
 /* SCSS/CSS */
+@import 'mixins';
 @import 'base';
 @import 'main';
-@import 'mixins';
 
 
 /* --------------------
- PAGE LAYOUTS
+ PAGE STYLES
 ---------------------*/
 .featureImage{
 	max-width: 100%;
-}
-
-.intro{
-	background-color: $mainColor;
-	padding: $globalPadding;
-	@include opacity(.8);
 	position: relative;
 }
 
-.music{
+#intro{
+	background: black;
+}
+
+#intro .introBox{
+	background-color: $mainColor;
+	padding: $globalPadding;
+	@include opacity(.9);
+}
+
+#intro .introBox h1, #intro .introBox p{
+	@include opacity(1);
+}
+
+#genres{
 	background-color: $bgColor1;
 	padding: $globalPadding;
 }
 
-.venues{
+#venues{
 	background-color: $bgColor2;
 	padding: $globalPadding;
 }
 
-.mixes{
+
+#mixes{
 	background-color: $bgColor1;
 	padding: $globalPadding;
 }
 
-.signUp{
+.soundClouldPlayer{
+	width: 100%;
+}
+
+#mailChimpForm{
+	@include pxtoem(width, 450);
+}
+
+#signUp{
 	background-color: $bgColor2;
 	padding: $globalPadding;
 }
 
-.contact{
+#venues ul, #social ul{
+	overflow: auto;
+}
+
+#venues li, #social li{
+	@include pxtoem(padding-top, 10);
+	text-wrap:none;	
+	float:left;
+	width: 100%;
+}
+
+input {
+	cursor: pointer;
+	outline: none;
+	background-color: $bgColor1;
+	color: $bgColor2;
+	height: 1.7em;
+	padding-left: .4em;
+	margin-top: .8em;
+	font-size: .9em;
+	text-align: center;
+    font-family: $bodyFont, sans-serif;
+}
+ 
+input:hover {
+	background-color: $bgColor3;
+	color: $bgColor2;
+}
+ 
+.formButton{
+	color: $bgColor2;
+	background-color: $mainColor;
+	padding: 6px;
+	margin-top: .8em;
+	border: 0px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+
+#social{
 	background-color: $bgColor3;
 	padding: $globalPadding;
 }
 
-.SCplayer{
-	width: 100%;
+#social div{
+	-webkit-border-radius: 1em;
+	width: 2em;
+	height: 2em;
+	background: $bgColor2; 
+	@include opacity(.4);
+	line-height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+	float: left;
 }
 
-#mc_embed_signup{
-	@include px-to-ems(width, 450);
+#social div:before{
+	@include pxtoem(padding-left,6);
 }
 
-/* show grid background
-@include susy-grid-background;
+#social a{
+	text-align: center;
+	line-height: 2em;
+	padding-left: .6em;
+}
+
+/* --------------------
+ RWD LAYOUT
+---------------------*/
+
+/* Smartphone Layout */
+/*
+@include at-breakpoint(30em 8) {
+	@include container;
+	#intro .introBox{
+		position: absolute;
+		@include pxtoem(top, 235);
+		@include pxtoem(left, 309);
+		@include pxtoem(width, 400);
+	}
+}
 */
- 	 
-.page{
- 	@include container($total-columns);
- 	
- 	/* Tablet */
-    @include at-breakpoint(30em 8) {
-    	@include container;
-    	.intro{
-    		top: -200px;
-    		@include px-to-ems(left, 199);
-			@include px-to-ems(width, 400);
-    	}
-    }
-}	
+ 
+#page {
+  @include container;
+  
+  @include at-breakpoint($desktopBreak) {
+    @include set-container-width;
+    #social li, #venues li{width: 33%;}
+  }
+
+}

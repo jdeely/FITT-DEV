@@ -1,6 +1,7 @@
 /* --------------------
  MIXINS
 ---------------------*/
-@mixin px-to-ems($prop, $pixels, $context: $browser-context) {
+@mixin pxtoem($prop, $pixels, $context: $browser-context) {
    #{$prop}: #{$pixels/$context}em
 }
+

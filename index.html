@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css" media="screen, projection" type="text/css" />
+		<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         
         <!-- Load Google Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Actor|Patua+One' rel='stylesheet' type='text/css'>
@@ -24,22 +25,23 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 		
-		<div class="page">
-	        <!-- Add your site or application content here -->
-	        <img src="img/djVinylRichie.jpg" class="featureImage">
-	        <div class="intro">
-				<h1 class="headerLight">DJ Vinyl Richie</h1>
-				<p class="bodyLight">Thanks for swinging by. I’m a Brooklyn based DJ that has been spinning in the NYC area for the last 6 years.</p> 
+		<div id="page">
+	        <div id="intro">
+	        	<img src="img/djVinylRichie.jpg" class="featureImage">
+	        	<div class="introBox">
+					<h1 class="headerLight">DJ Vinyl Richie</h1>
+					<p class="bodyLight">Thanks for swinging by. I’m a Brooklyn based DJ that has been spinning in the NYC area for the last 6 years.</p> 
+				</div>
 	        </div>
 	        
-	        <div class="music">
+	        <div id="genres">
 	        	<h1>Music</h1>
 	        	<p>Depending on the time of day, I can be found mixing a blend of:</p>
 	        	<p class="genre">house, old-school hip-hop, 80’s, rock, new wave, electro, funk, soul, disco, reggae and dub</p>
-	        	<a href="http://www.last.fm/user/vinylRichie27">See more on Last.fm</a>
+	        	<a class="moreLink" href="http://www.last.fm/user/vinylRichie27">See more on Last.fm</a>
 	        </div>
 	        
-	        <div class="venues">
+	        <div id="venues">
 	        	<h1 class="headerLight">Venues</h1>
 	        	<p class="bodyLight">In addition to various house parties, BBQs, and rooftop jams, I’ve had the opportunity to rock the following venues:</p>
 	        	<ul>
@@ -58,53 +60,43 @@
 	        	</ul>
 	        </div>        
 	        
-	        <div class="mixes">
-	        	<h1>Listen</h1>
-	        	<p>Listen and download some of my mixes on Soundcloud</p>
-	        	<div class="SCplayer">
+	        <div id="mixes">
+	        	<h1>DJ Mixes</h1>
+	        	<p class="textForMobile">Here's one of my recent mixes from Soundcloud</p>
+	        	<p class="textForOther">Listen and download some of my mixes on Soundcloud</p>
+	        	<div class="soundClouldPlayer">
 		        	<iframe class="scWidget" width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F55540748&amp;auto_play=false&amp;show_artwork=true&amp;color=ff7700"></iframe>
 	        	</div>
-	        	<a href="https://soundcloud.com/vinylrichie27">More on SoundCloud</a>
+	        	<a class="textForMobile moreLink" href="https://soundcloud.com/vinylrichie27">More on SoundCloud</a>
+	        	<a class="textForOther moreLink" href="https://soundcloud.com/vinylrichie27">More mixes on SoundCloud</a>	        	
 	        </div>
 	        
-	        <div class="signUp">
+	        <div id="signUp">
 	        	<h1 class="headerLight">Upcoming Gig Alerts</h1>
 	        	<p class="bodyLight">Signup to get notified of my upcoming gigs.</p>
-<!--
-	        	<form>
-	        		<input type="text" value="First Name" class="formText">
-	        		<input type="text" value="Last Name" class="formText">
-	        		<input type="text" value="Your Email Address" class="formText">
-	        		<div class="btn">submit</div>
-	        	</form>
--->
-
+	        	
 				<!-- Begin MailChimp Signup Form -->
-				<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-				<style type="text/css">
-					/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-					   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-				</style>
-				<div id="mc_embed_signup">
-				<form action="http://johndee.us4.list-manage1.com/subscribe/post?u=01d3edff31afdf9ada4e926d8&amp;id=c4eadc2e87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					
-					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-					<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-				</form>
+				<div id="mailChimpForm">
+					<form action="http://johndee.us4.list-manage1.com/subscribe/post?u=01d3edff31afdf9ada4e926d8&amp;id=c4eadc2e87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button formButton"></div>
+					</form>
 				</div>
 				
 				<!--End mc_embed_signup-->
 	        </div>
 	        
-	       <div class="contact">
+	       <div id="social">
 	        	<h1>Drop me a line</h1>
 	        	<ul>
-	        		<li><a href="https://soundcloud.com/vinylrichie27">Follow me on SoundCloud</a></li>
-	        		<li><a href="http://www.facebook.com/jdeely77">Friend me on Facebook</a></li>
-	        		<li><a href="https://twitter.com/iDeely">Follow me on Twitter</a></li>
-	        		<li><a href="http://www.last.fm/user/vinylRichie27">Find me on Last.fm</a></li>
-	        		<li><a href="http://pinterest.com/vinylrichie/music/">Music board on Pintrest</a></li>
-	        		<li><a href="mailto:john@amplifiedmedia.com">Email me</a></li>
+	        		<li><div class="icon-cloud"></div><a href="https://soundcloud.com/vinylrichie27">Follow me on SoundCloud</a></li>
+	        		<li><div class="icon-facebook"></div><a href="http://www.facebook.com/jdeely77">Friend me on Facebook</a></li>
+	        		<li><div class="icon-twitter-bird"></div><a href="https://twitter.com/iDeely">Follow me on Twitter</a></li>
+	        		<li><div class="icon-lastfm"></div><a href="http://www.last.fm/user/vinylRichie27">Find me on Last.fm</a></li>
+	        		<li><div class="icon-picture"></div><a href="http://pinterest.com/vinylrichie/music/">Music board on Pintrest</a></li>
+	        		<li><div class="icon-mail"></div><a href="mailto:john@amplifiedmedia.com">Email me</a></li>
+	        	</ul>  
 	        </div>
         </div> 
          
