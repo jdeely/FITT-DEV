@@ -15,50 +15,37 @@
 /* --------------------
  PAGE STYLES
 ---------------------*/
+
+/* INTRO */
 .featureImage{
 	max-width: 100%;
 	position: relative;
+	text-align: right;
 }
 
 #intro{
 	background: black;
+	position: relative;
+	text-align: right;
 }
 
 #intro .introBox{
-	background-color: $mainColor;
+	background-color: shade($mainColor, 20);
 	padding: $globalPadding;
 	@include opacity(.9);
+	text-align: left;
 }
 
-#intro .introBox h1, #intro .introBox p{
-	@include opacity(1);
-}
 
+
+/* GENRES */
 #genres{
 	background-color: $bgColor1;
 	padding: $globalPadding;
 }
 
+
 #venues{
-	background-color: $bgColor2;
-	padding: $globalPadding;
-}
-
-
-#mixes{
-	background-color: $bgColor1;
-	padding: $globalPadding;
-}
-
-.soundClouldPlayer{
-	width: 100%;
-}
-
-#mailChimpForm{
-	@include pxtoem(width, 450);
-}
-
-#signUp{
 	background-color: $bgColor2;
 	padding: $globalPadding;
 }
@@ -71,7 +58,36 @@
 	@include pxtoem(padding-top, 10);
 	text-wrap:none;	
 	float:left;
+	width: 50%;
+}
+
+
+/* MIXES */
+#mixes{
+	background-color: $bgColor1;
+	padding: $globalPadding;
+}
+
+#mixes iframe{
+	float: left;
+	overflow: auto;
+	@include pxtoem(padding, 4);
+}
+
+.soundClouldPlayer{
 	width: 100%;
+}
+
+
+/* SIGNUP */
+#signUp{
+	background-color: $bgColor2;
+	padding: $globalPadding;
+	overflow: auto;
+}
+
+#mailChimpForm{
+	@include pxtoem(width, 450);
 }
 
 input {
@@ -80,10 +96,12 @@ input {
 	background-color: $bgColor1;
 	color: $bgColor2;
 	height: 1.7em;
+	height: 2.3em;
+	width: 16em;
 	padding-left: .4em;
+	margin-bottom: 1em;
 	margin-top: .8em;
 	font-size: .9em;
-	text-align: center;
     font-family: $bodyFont, sans-serif;
 }
  
@@ -95,6 +113,7 @@ input:hover {
 .formButton{
 	color: $bgColor2;
 	background-color: $mainColor;
+	width: 5em;
 	padding: 6px;
 	margin-top: .8em;
 	border: 0px;
@@ -106,8 +125,13 @@ input:hover {
 	-o-transition: all 0.2s ease-in-out;
 }
 
+#signUp img {
+	display: none;
+}
+
+/* SOCIAL LINKS */
 #social{
-	background-color: $bgColor3;
+	background-color: $bgColor1;
 	padding: $globalPadding;
 }
 
@@ -136,26 +160,36 @@ input:hover {
 /* --------------------
  RWD LAYOUT
 ---------------------*/
-
-/* Smartphone Layout */
-/*
-@include at-breakpoint(30em 8) {
-	@include container;
-	#intro .introBox{
-		position: absolute;
-		@include pxtoem(top, 235);
-		@include pxtoem(left, 309);
-		@include pxtoem(width, 400);
-	}
-}
-*/
  
 #page {
-  @include container;
-  
-  @include at-breakpoint($desktopBreak) {
-    @include set-container-width;
-    #social li, #venues li{width: 33%;}
-  }
-
+	@include container($total-columns, $desktopBreak);
 }
+
+/* Tablet Layout */
+@include at-breakpoint($tabletBreak) {	
+	#intro .introBox{
+		position: absolute;
+		right: 0;
+		@include pxtoem(bottom,40);
+		@include pxtoem(width, 400);
+	}
+	
+	.genre{
+		font-size: 3.5em;
+    	line-height: 1.2em;
+	}
+	
+	#social li, #venues li{width: 33%;}
+	
+	#mixes iframe{width: 47%;}
+	
+	#signUp #mailChimpForm { @include span-columns(4,7); }
+	#signUp img { @include span-columns(3 omega,7);}
+	#signUp img {display: block; }
+}
+
+/* Desktop Layout */
+@include at-breakpoint($desktopBreak) {	
+	#signUp img {max-width: 100%; display: block;} 
+}
+

@@ -24,23 +24,21 @@ $globalPadding: .8em;
 
 
 /* grid */
-$total-columns: 7; // a 4-column grid
-$column-width: 4em; // each column is 4em wide
-$gutter-width: 1em; // 1em gutters between columns
-$grid-padding: 0; // grid-padding equal to gutters
+$total-columns: 10;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: 0;
 
-$desktopBreak: 10;
 $tabletBreak: 7;
-$mobileBreak: 4;
+$desktopBreak: 12;
  
 
 /* --------------------
- FONT STYLING
+ GLOBAL STYLES
 ---------------------*/
 html{
-	background-color: $bgColor3;
+	background: $bgColor3;
 }
-
 body {
     font-size: 1.2em;
     line-height: 1.4em;
@@ -52,15 +50,20 @@ p {
 	margin-bottom: .5em;
 }
 
+img {
+	max-width: 100%;
+}
+
 a {
 	@include link-colors($accentColor, lighten($accentColor, 20%), darken($accentColor, 10%));
 	@include hover-link;
-	font-size: .8em;
+	font-size: .9em;
 }
 
 .moreLink{
 	display: block;
-	@include pxtoem(padding-top, 15);
+	@include pxtoem(padding-top, 10);
+	@include pxtoem(padding-bottom, 10);
 	clear: left;
 }
 
@@ -83,7 +86,7 @@ a {
 }
 
 .genre{
-    font-size: 2.1em;
+    font-size: 2em;
     line-height: 1.2em;
     font-family: $headerFont, sans-serif;	
     color: $mainColorDark;
@@ -121,6 +124,10 @@ h1{
 
 .linkAccent{
 	@include link-colors($accentColor, lighten($accentColor, 20%), darken($accentColor, 10%));	
+}
+
+.textForOther{
+	display:none;
 }
 
 
@@ -161,21 +168,3 @@ content: '\2709';
 .icon-lastfm:before { content: '\f318'; } 
 .icon-picture:before { content: '🌄'; } 
 .icon-cloud:before { content: '\2601'; } 
-
-
-
-/* --------------------
- OTHER ELEMENTS
----------------------*/
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-.textForOther{
-	display:none;
-}
