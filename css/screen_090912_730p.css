@@ -413,19 +413,19 @@ textarea {
  PAGE STYLES
 ---------------------*/
 /* INTRO */
-/* line 20, ../sass/screen.scss */
+/* line 20, ../sass/screen_090912_730p.scss */
 .featureImage {
   max-width: 100%;
   position: relative;
   text-align: right; }
 
-/* line 26, ../sass/screen.scss */
+/* line 26, ../sass/screen_090912_730p.scss */
 #intro {
   background: black;
   position: relative;
   text-align: right; }
 
-/* line 32, ../sass/screen.scss */
+/* line 32, ../sass/screen_090912_730p.scss */
 #intro .introBox {
   background-color: #41c4cc;
   padding: 0.8em;
@@ -434,73 +434,56 @@ textarea {
   text-align: left; }
 
 /* GENRES */
-/* line 42, ../sass/screen.scss */
+/* line 42, ../sass/screen_090912_730p.scss */
 #genres {
   background-color: #dad6d3;
   padding: 0.8em; }
 
 /* VENUES */
-/* line 49, ../sass/screen.scss */
+/* line 49, ../sass/screen_090912_730p.scss */
 #venues {
   background-color: #5d5a58;
   padding: 0.8em; }
 
-/* line 54, ../sass/screen.scss */
+/* line 54, ../sass/screen_090912_730p.scss */
 #venues ul, #social ul {
-  overflow: auto;
-  padding-bottom: 1.5em; }
+  overflow: auto; }
 
-/* line 59, ../sass/screen.scss */
-#venues li:before {
-  content: "\00BB \0020";
-  color: #413e3d; }
-
-/* line 64, ../sass/screen.scss */
+/* line 58, ../sass/screen_090912_730p.scss */
 #venues li, #social li {
   padding-top: 0.625em;
   text-wrap: none;
   float: left;
-  width: 50%;
-  position: relative; }
+  width: 50%; }
 
-/* venue with image
-#venues div{
-	position: absolute;
-	background-color: shade($mainColor, 20);
-	@include opacity(.9);
-	bottom: 0;
-	padding: .1em .4em;
-	width: 192px;
-}
-
-#venue span{
-	@include opacity(1);
-}
-*/
 /* MIXES */
-/* line 89, ../sass/screen.scss */
+/* line 67, ../sass/screen_090912_730p.scss */
 #mixes {
   background-color: #dad6d3;
   padding: 0.8em; }
 
-/* line 94, ../sass/screen.scss */
+/* line 72, ../sass/screen_090912_730p.scss */
 #mixes iframe {
   float: left;
   overflow: auto;
   padding: 0.25em; }
 
-/* line 100, ../sass/screen.scss */
+/* line 78, ../sass/screen_090912_730p.scss */
 .soundClouldPlayer {
   width: 100%; }
 
 /* SIGNUP */
-/* line 106, ../sass/screen.scss */
+/* line 84, ../sass/screen_090912_730p.scss */
 #signUp {
   background-color: #5d5a58;
   padding: 0.8em;
   overflow: auto; }
 
-/* line 112, ../sass/screen.scss */
+/* line 90, ../sass/screen_090912_730p.scss */
+#mailChimpForm {
+  width: 28.125em; }
+
+/* line 94, ../sass/screen_090912_730p.scss */
 input {
   cursor: pointer;
   outline: none;
@@ -515,12 +498,12 @@ input {
   font-size: .9em;
   font-family: Actor, sans-serif; }
 
-/* line 127, ../sass/screen.scss */
+/* line 109, ../sass/screen_090912_730p.scss */
 input:hover {
   background-color: #f4f0ee;
   color: #5d5a58; }
 
-/* line 132, ../sass/screen.scss */
+/* line 114, ../sass/screen_090912_730p.scss */
 .formButton {
   color: #5d5a58;
   background-color: #52f5ff;
@@ -535,22 +518,17 @@ input:hover {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out; }
 
-/* line 147, ../sass/screen.scss */
-.formButton:hover {
-  background-color: #41c4cc;
-  color: #413e3d; }
-
-/* line 152, ../sass/screen.scss */
+/* line 129, ../sass/screen_090912_730p.scss */
 #signUp img {
   display: none; }
 
 /* SOCIAL LINKS */
-/* line 157, ../sass/screen.scss */
+/* line 134, ../sass/screen_090912_730p.scss */
 #social {
   background-color: #dad6d3;
   padding: 0.8em; }
 
-/* line 162, ../sass/screen.scss */
+/* line 139, ../sass/screen_090912_730p.scss */
 #social div {
   -webkit-border-radius: 1em;
   width: 2em;
@@ -563,11 +541,11 @@ input:hover {
   margin-right: auto;
   float: left; }
 
-/* line 174, ../sass/screen.scss */
+/* line 151, ../sass/screen_090912_730p.scss */
 #social div:before {
   padding-left: 0.375em; }
 
-/* line 178, ../sass/screen.scss */
+/* line 155, ../sass/screen_090912_730p.scss */
 #social a {
   text-align: center;
   line-height: 2em;
@@ -576,7 +554,7 @@ input:hover {
 /* --------------------
  RWD LAYOUT
 ---------------------*/
-/* line 188, ../sass/screen.scss */
+/* line 165, ../sass/screen_090912_730p.scss */
 #page {
   *zoom: 1;
   max-width: 34em;
@@ -591,54 +569,50 @@ input:hover {
     display: table;
     clear: both; }
   @media (min-width: 49em) {
-    /* line 188, ../sass/screen.scss */
+    /* line 165, ../sass/screen_090912_730p.scss */
     #page {
       max-width: 49em; } }
 
 /* Tablet Layout */
 @media (min-width: 34em) {
-  /* line 194, ../sass/screen.scss */
+  /* line 171, ../sass/screen_090912_730p.scss */
   #intro .introBox {
     position: absolute;
     right: 0;
     bottom: 2.5em;
     width: 25em; }
 
-  /* line 201, ../sass/screen.scss */
+  /* line 178, ../sass/screen_090912_730p.scss */
   .genre {
     font-size: 3.5em;
     line-height: 1.2em; }
 
-  /* line 206, ../sass/screen.scss */
+  /* line 183, ../sass/screen_090912_730p.scss */
   #social li, #venues li {
     width: 33%; }
 
-  /* line 208, ../sass/screen.scss */
+  /* line 185, ../sass/screen_090912_730p.scss */
   #mixes iframe {
     width: 47%; }
 
-  /* line 210, ../sass/screen.scss */
+  /* line 187, ../sass/screen_090912_730p.scss */
   #signUp #mailChimpForm {
     width: 55.88235%;
     float: left;
     margin-right: 2.94118%; }
 
-  /* line 211, ../sass/screen.scss */
+  /* line 188, ../sass/screen_090912_730p.scss */
   #signUp img {
     width: 41.17647%;
     float: right;
     margin-right: 0; }
 
-  /* line 212, ../sass/screen.scss */
+  /* line 189, ../sass/screen_090912_730p.scss */
   #signUp img {
     display: block; } }
 /* Desktop Layout */
 @media (min-width: 49em) {
-  /* line 217, ../sass/screen.scss */
+  /* line 194, ../sass/screen_090912_730p.scss */
   #signUp img {
     max-width: 100%;
-    display: block; }
-
-  /* line 218, ../sass/screen.scss */
-  #venues li {
-    width: 25%; } }
+    display: block; } }

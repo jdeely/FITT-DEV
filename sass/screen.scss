@@ -45,6 +45,7 @@
 }
 
 
+/* VENUES */
 #venues{
 	background-color: $bgColor2;
 	padding: $globalPadding;
@@ -52,14 +53,36 @@
 
 #venues ul, #social ul{
 	overflow: auto;
+	padding-bottom: 1.5em;
 }
+
+#venues li:before {
+	content: "\00BB \0020";
+	color: shade($bgColor2, 30);
+	}
 
 #venues li, #social li{
 	@include pxtoem(padding-top, 10);
 	text-wrap:none;	
 	float:left;
 	width: 50%;
+	position: relative;
 }
+
+/* venue with image
+#venues div{
+	position: absolute;
+	background-color: shade($mainColor, 20);
+	@include opacity(.9);
+	bottom: 0;
+	padding: .1em .4em;
+	width: 192px;
+}
+
+#venue span{
+	@include opacity(1);
+}
+*/
 
 
 /* MIXES */
@@ -84,10 +107,6 @@
 	background-color: $bgColor2;
 	padding: $globalPadding;
 	overflow: auto;
-}
-
-#mailChimpForm{
-	@include pxtoem(width, 450);
 }
 
 input {
@@ -123,6 +142,11 @@ input:hover {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
+}
+
+.formButton:hover{
+	background-color: shade($mainColor,20);
+	color: shade($bgColor2,30);
 }
 
 #signUp img {
@@ -191,5 +215,6 @@ input:hover {
 /* Desktop Layout */
 @include at-breakpoint($desktopBreak) {	
 	#signUp img {max-width: 100%; display: block;} 
+	#venues li{width: 25%;}
 }
 
