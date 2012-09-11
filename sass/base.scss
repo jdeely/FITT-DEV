@@ -24,14 +24,14 @@ $globalPadding: .8em;
 
 
 /* grid */
-$total-columns: 7; // a 4-column grid
+$total-columns: 10;
 $column-width: 4em; // each column is 4em wide
 $gutter-width: 1em; // 1em gutters between columns
 $grid-padding: 0; // grid-padding equal to gutters
 
-$desktopBreak: 10;
+$desktopBreak: 12;
 $tabletBreak: 7;
-$mobileBreak: 4;
+$mobileBreak: 5;
  
 
 /* --------------------
